@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+body{
+    background-color: #f6f6f6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 250px;
+    background-color: #ffff;
+  
+}
+header .img, .title, .carrinho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 33%;
+}
+header img{
+width: 300px;
+height: 250px;
+}
+header h1{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-family: 'Playpen Sans', cursive, sans-serif;
+    color: #E1C928;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.500);
+}
+.carrinho{
+    position: relative;
+}
+.number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #E1C928;
+    width: 20px;
+    border-radius: 50%;
+    margin-left: 1.3rem;
+    margin-top: -1rem;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: #ffff; 
+    margin-bottom: 1rem;
+}
+.navbar nav ul li{
+    display: inline-block;
+    margin: 1rem 2rem;
+    transition: ease-in-out 0.3s;
+ 
+}
+.navbar nav ul li a {
+    text-decoration: none;
+    color: black;
+    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.200);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.navbar nav ul li:hover{
+    transform: translateY(-3px);
+}
+
+.carousel{
+    position: relative;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrousel-parent{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 650px;
+    height: 600px;
+    overflow: hidden;
+}
+.carrousel-image img{
+    width: 650px;
+    margin-left: 650px;
+    transition: margin 1s ease-in-out;
+
+}
+.carrousel-image-two img {
+    width: 650px;
+    margin-right: 0px;
+    transition: margin 1s ease-in-out;
+    
+}
+
