@@ -62,6 +62,10 @@ function menuisVisile() {
     }
    
 }
+function menuDefinitive(){
+    cart.classList.add('shopping-cart')
+    cart.classList.remove('shopping-cart-hidden')
+}
 
 const add_to_card = document.querySelectorAll('.Button');
 for(var i = 0; i < add_to_card.length; i++){
@@ -71,7 +75,7 @@ for(var i = 0; i < add_to_card.length; i++){
 function addProductToCart(event){
     number_cart ++
     numberProducts.innerText = number_cart
-    menuisVisile()
+    menuDefinitive()
     const button = event.target
     const productInfos = button.parentElement.parentElement
     productImage = productInfos.querySelector('img').src
