@@ -69,16 +69,14 @@ for(var i = 0; i < add_to_card.length; i++){
 }
 
 function addProductToCart(event){
-    number_cart = number_cart =+ 1
+    number_cart ++
+    numberProducts.innerText = number_cart
     menuisVisile()
     const button = event.target
     const productInfos = button.parentElement.parentElement
     productImage = productInfos.querySelector('img').src
     productTitle = productInfos.querySelector('.title').textContent
     productPrice = productInfos.querySelector('.price').textContent
-    console.log(productTitle)
-    console.log(productImage)
-    console.log(productPrice)
 
     let newCardProduct = document.createElement("div")
     newCardProduct.classList.add('product-container')
@@ -92,9 +90,10 @@ function addProductToCart(event){
     <div class="product-title"><p>${productTitle}</p></div>
   <div class="product-price"><p>${productPrice}</p></div>
 </div> `
-  const cart = document.querySelector('.cart-content')
-  cart.append(newCardProduct)
-  updateTotal()
+const cart = document.querySelector('.cart-content');
+const totalElement = document.querySelector('.total');
+cart.insertBefore(newCardProduct, totalElement);
+updateTotal();
  
 }
 updateTotal()

@@ -230,6 +230,7 @@ footer{
     margin-top: 1rem;
     display: flex;
     border: 1px solid gray;
+    max-width: 100%;
 
 }
 .product-container img{
