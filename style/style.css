@@ -77,7 +77,15 @@ header h1{
     transform: translateY(-3px);
 }
 
-.carrousel {
-    max-width: 635px; 
-    margin: 0 auto;
+
+@media (max-width: 768px) {
+    #carouselExampleIndicators {
+      max-width: 80vw;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #carouselExampleIndicators {
+      max-width: 90vw;
+    }
   }
