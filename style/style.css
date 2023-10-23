@@ -7,6 +7,7 @@
 body{
     background-color: #f6f6f6;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 header{
     display: flex;
@@ -14,7 +15,7 @@ header{
     align-items: center;
     justify-content: space-between;
     width: 100vw;
-    height: 250px;
+    height: 230px;
     background-color: #ffff;
   
 }
@@ -26,7 +27,7 @@ header .img, .title, .carrinho{
 }
 header img{
 width: 300px;
-height: 250px;
+height: 210px;
 }
 header h1{
     text-transform: uppercase;
@@ -56,11 +57,11 @@ header h1{
     align-items: center;
     width: 100vw;
     background-color: #ffff; 
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 .navbar nav ul li{
     display: inline-block;
-    margin: 1rem 2rem;
+    margin: 0.5rem 2rem;
     transition: ease-in-out 0.3s;
  
 }
@@ -76,34 +77,7 @@ header h1{
     transform: translateY(-3px);
 }
 
-.carousel{
-    position: relative;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carrousel-parent{
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 650px;
-    height: 600px;
-    overflow: hidden;
-}
-.carrousel-image img{
-    width: 650px;
-    margin-left: 650px;
-    transition: margin 1s ease-in-out;
-
-}
-.carrousel-image-two img {
-    width: 650px;
-    margin-right: 0px;
-    transition: margin 1s ease-in-out;
-    
-}
-
+.carrousel {
+    max-width: 635px; 
+    margin: 0 auto;
+  }
