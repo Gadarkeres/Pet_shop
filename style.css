@@ -204,11 +204,12 @@ footer{
     justify-content: center;
     background-color: #ffff;
     position: absolute;
-    width: 400px;
+    width: 450px;
     height: 100%;
-    right: 0;
-    top: 0;
+    right: -10px;
+    top: 0px;
     transition: right 0.5s;
+    overflow: hidden;
     
 }
 .cart-content{
@@ -229,6 +230,7 @@ footer{
     margin-top: 1rem;
     display: flex;
     border: 1px solid gray;
+
 }
 .product-container img{
     margin: 0 0.5rem;
@@ -255,6 +257,12 @@ footer{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+.remove-item{
+    transition: transform 0.2s ease-in-out;
+}
+.remove-item:hover{
+    transform: translateY(-3px);
 }
 
 @media (max-width: 768px) {
