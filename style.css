@@ -264,6 +264,9 @@ div[class="alert alert-danger"] {
   opacity: 0;
   transition: opacity 0.5s;
 }
+#remove-item{
+  max-width: 150px;
+}
 @media (max-width: 768px) {
   .product-title p {
     font-size: 0.8rem;
