@@ -1,57 +1,51 @@
-const cart = document.querySelector('#cart')
-const close_cart = document.querySelector('#close-cart')
-const open_cart = document.querySelector('#card_open')
-
-
+const cart = document.querySelector("#cart");
+const close_cart = document.querySelector("#close-cart");
+const open_cart = document.querySelector("#card_open");
 
 open_cart.addEventListener("click", menuisVisile);
-close_cart.addEventListener("click", menuisVisile)
+close_cart.addEventListener("click", menuisVisile);
 
+const buy_Button = document
+  .querySelector("#buy")
+  .addEventListener("click", () => {
+    const error_Button = document.querySelector("#danger");
+    const value = document.querySelector(".total p").textContent;
+    console.log(value);
+    if (value === "TOTAL : R$0,00") {
+      error_Button.classList.add("alert.active");
+      setTimeout(() => {
+        error_Button.classList.remove("alert.active");
+      }, 2500);
+    } else {
+      alert("Sucesso!");
+    }
+  });
 
-
- 
- const buy_Button = document.querySelector('#buy').addEventListener('click', () => {
-  const error_Button= document.querySelector('#danger')
-const value = document.querySelector('.total p').textContent
-console.log(value)
-  if(value === 'TOTAL : R$0,00'){
-    error_Button.classList.add('alert.active')
-    setTimeout(() => {
-      error_Button.classList.remove('alert.active')
-    }, 2500);
-  } else{
-    alert('Sucesso!')
-  }
- })
-
-
-
-const cartContent = document.querySelector('.cart-content');
-cartContent.addEventListener('click', function (event) {
-  if (event.target.classList.contains('remove-item')) {
+const cartContent = document.querySelector(".cart-content");
+cartContent.addEventListener("click", function (event) {
+  if (event.target.classList.contains("remove-item")) {
     removeProduct(event);
   }
 });
 
-const remove_to_card = document.getElementsByClassName('remove-item');
+const remove_to_card = document.getElementsByClassName("remove-item");
 for (var i = 0; i < remove_to_card.length; i++) {
-    remove_to_card[i].addEventListener('click', removeProduct)
+  remove_to_card[i].addEventListener("click", removeProduct);
 }
-function removeProduct(event){
-  const alertButton = document.querySelector('#sucess')
-        let container = event.target;
-        while (container && !container.classList.contains('product-container')) {
-            container = container.parentElement;
-        }
-        if (container) {
-          alertButton.classList.add('alert.active')
-          setTimeout(() => {
-            alertButton.classList.remove('alert.active')
-          }, 2500);
-            container.remove();
-            updateTotal();
-          
-        }
+function removeProduct(event) {
+  const alertButton = document.querySelector("#sucess");
+  let container = event.target;
+  while (container && !container.classList.contains("product-container")) {
+    container = container.parentElement;
+  }
+  if (container) {
+    alertButton.classList.add("alert.active");
+    setTimeout(() => {
+      alertButton.classList.remove("alert.active");
+    }, 2500);
+    container.remove();
+    updateTotal();
+  }
 }
 
 function updateTotal() {
@@ -71,40 +65,38 @@ function updateTotal() {
   totalAmount = totalAmount.toFixed(2);
   totalAmount = totalAmount.replace(".", ",");
   total.innerText = `TOTAL : R$${totalAmount}`;
- 
 }
 
 function menuisVisile() {
-    if (cart.classList.contains('shopping-cart-hidden')){
-        cart.classList.remove('shopping-cart-hidden')
-        cart.classList.add('shopping-cart')
-    }  else{
-        cart.classList.add('shopping-cart-hidden')
-        cart.classList.remove('shopping-cart')   
-    }
-   
+  if (cart.classList.contains("shopping-cart-hidden")) {
+    cart.classList.remove("shopping-cart-hidden");
+    cart.classList.add("shopping-cart");
+  } else {
+    cart.classList.add("shopping-cart-hidden");
+    cart.classList.remove("shopping-cart");
+  }
 }
-function menuDefinitive(){
-    cart.classList.add('shopping-cart')
-    cart.classList.remove('shopping-cart-hidden')
-}
-
-const add_to_card = document.querySelectorAll('.Button');
-for(var i = 0; i < add_to_card.length; i++){
-    add_to_card[i].addEventListener('click', addProductToCart)
+function menuDefinitive() {
+  cart.classList.add("shopping-cart");
+  cart.classList.remove("shopping-cart-hidden");
 }
 
-function addProductToCart(event){
-    menuDefinitive()
-    const button = event.target
-    const productInfos = button.parentElement.parentElement
-    productImage = productInfos.querySelector('img').src
-    productTitle = productInfos.querySelector('.title').textContent
-    productPrice = productInfos.querySelector('.price').textContent
+const add_to_card = document.querySelectorAll(".Button");
+for (var i = 0; i < add_to_card.length; i++) {
+  add_to_card[i].addEventListener("click", addProductToCart);
+}
 
-    let newCardProduct = document.createElement("div")
-    newCardProduct.classList.add('product-container')
-    newCardProduct.innerHTML = `
+function addProductToCart(event) {
+  menuDefinitive();
+  const button = event.target;
+  const productInfos = button.parentElement.parentElement;
+  productImage = productInfos.querySelector("img").src;
+  productTitle = productInfos.querySelector(".title").textContent;
+  productPrice = productInfos.querySelector(".price").textContent;
+
+  let newCardProduct = document.createElement("div");
+  newCardProduct.classList.add("product-container");
+  newCardProduct.innerHTML = `
     <svg xmlns="http://www.w3.org/2000/svg" class="remove-item" style="position: absolute; right: 15px; cursor:pointer;" width="24" height="24" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
     <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
     <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
@@ -113,11 +105,10 @@ function addProductToCart(event){
   <div class="product-infos">
     <div class="product-title"><p>${productTitle}</p></div>
   <div class="product-price"><p>${productPrice}</p></div>
-</div> `
-const cart = document.querySelector('.cart-content');
-const totalElement = document.querySelector('.total');
-cart.insertBefore(newCardProduct, totalElement);
-updateTotal();
- 
+</div> `;
+  const cart = document.querySelector(".cart-content");
+  const totalElement = document.querySelector(".total");
+  cart.insertBefore(newCardProduct, totalElement);
+  updateTotal();
 }
-updateTotal()
+updateTotal();
