@@ -32,7 +32,7 @@ height: 180px;
 }
 header h1{
     text-transform: uppercase;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: 'Playpen Sans', cursive, sans-serif;
     color: #E1C928;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.500);
@@ -40,18 +40,6 @@ header h1{
 .carrinho{
     position: relative;
 }
-.number{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    background-color: #E1C928;
-    width: 20px;
-    border-radius: 50%;
-    margin-left: 1.3rem;
-    margin-top: -1rem;
-}
-
 .navbar{
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.200);
     display: flex;
@@ -157,6 +145,7 @@ header h1{
     gap: 5rem;
 }
 .title{
+    padding: 1rem;
     font-weight: bold;
 }
 .button button{
@@ -268,11 +257,48 @@ footer{
 .remove-item:hover{
     transform: translateY(-3px);
 }
+.carousel-indicators .active {
+    background-color: black;
+}
+
 
 @media (max-width: 768px) {
     #carouselExampleIndicators {
       max-width: 80vw;
     }
+    .navbar nav ul li{
+        font-size: 1rem;
+        display: inline-block;
+        margin: 0.1rem 0.5rem;
+        transition: ease-in-out 0.3s;
+     
+    }
+    .carousel-indicators {
+        display: none;
+    }
+    header h1{
+        margin-left: 1.5rem;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-family: 'Playpen Sans', cursive, sans-serif;
+        color: #E1C928;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.500);
+    }
+    header img{
+        width: 200px;
+        height: 150px;
+        }
+
+        .shopping-cart{
+            width: 250px;  
+        }
+        .cart-content{
+            width: 230px;
+        }
+        .cart-title{
+            font-size: 0.2rem;
+        }
+     
   }
   
   @media (max-width: 576px) {
