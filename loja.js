@@ -2,8 +2,8 @@ const cart = document.querySelector('#cart')
 const close_cart = document.querySelector('#close-cart')
 const open_cart = document.querySelector('#card_open')
 const numberProducts = document.querySelector('#card-number strong')
-let number_cart = 0
-
+let number_cart = 2
+numberProducts.innerText = number_cart
 
 
 open_cart.addEventListener("click", menuisVisile);
