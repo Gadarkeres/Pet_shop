@@ -261,7 +261,21 @@ footer{
     background-color: black;
 }
 
+.alert-active{
 
+    opacity: 1;
+    transition: opacity  0.5s;
+}
+
+div[class="alert alert-success"] {
+    opacity: 0;
+    transition: opacity  0.5s;
+}
+div[class="alert alert-danger"] {
+
+    opacity: 0;
+    transition: opacity  0.5s;
+}
 @media (max-width: 768px) {
     #carouselExampleIndicators {
       max-width: 80vw;

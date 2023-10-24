@@ -7,6 +7,9 @@ const open_cart = document.querySelector('#card_open')
 open_cart.addEventListener("click", menuisVisile);
 close_cart.addEventListener("click", menuisVisile)
 
+
+
+
 const cartContent = document.querySelector('.cart-content');
 cartContent.addEventListener('click', function (event) {
   if (event.target.classList.contains('remove-item')) {
@@ -19,6 +22,7 @@ for (var i = 0; i < remove_to_card.length; i++) {
     remove_to_card[i].addEventListener('click', removeProduct)
 }
 function removeProduct(event){
+  const alertButton = document.querySelector('#sucess')
         let container = event.target;
         while (container && !container.classList.contains('product-container')) {
             container = container.parentElement;
@@ -27,7 +31,10 @@ function removeProduct(event){
   
             container.remove();
             updateTotal();
-
+            alertButton.classList.add('alert.active')
+            setTimeout(() => {
+              alertButton.classList.remove('alert.active')
+            }, 2500);
         }
 }
 
@@ -48,6 +55,7 @@ function updateTotal() {
   totalAmount = totalAmount.toFixed(2);
   totalAmount = totalAmount.replace(".", ",");
   total.innerText = `TOTAL : R$${totalAmount}`;
+ 
 }
 
 function menuisVisile() {
