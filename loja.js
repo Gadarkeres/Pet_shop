@@ -106,7 +106,7 @@ function addProductToCart(event) {
   <div class="product-infos">
     <div class="product-title"><p>${productTitle}</p></div>
   <div class="product-price"><p>${productPrice}</p></div>
-  <button type="button" class="btn btn-warning" id="remove-item">Remover produto</button>
+  <button type="button" class="btn btn-danger" id="remove-item">Remover produto</button>
 </div> 
 `;
   const cart = document.querySelector(".cart-content");
