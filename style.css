@@ -309,6 +309,9 @@ div[class="alert alert-danger"] {
     width: 18px;
     height: 18px;
   }
+  .container-info{
+    margin: 3rem 0rem;
+  }
 }
 
 @media (max-width: 576px) {
