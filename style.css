@@ -216,10 +216,11 @@ footer{
     margin: 1rem 0;
     position: fixed;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     width: 400px;
-    max-height: 80vh;
+    max-height: 90vh;
     overflow-y: auto
 }
 .cart-title{
@@ -232,7 +233,7 @@ footer{
     margin-top: 1rem;
     display: flex;
     border: 1px solid gray;
-    max-width: 100%;
+    width: 100%;
 
 }
 .product-container img{
