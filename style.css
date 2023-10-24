@@ -200,13 +200,12 @@ footer{
     transition: right 0.5s;
 }
 .shopping-cart{
-    z-index: 5;
     display: flex;
     justify-content: center;
     overflow-x: auto;
     background-color: #ffff;
     position: absolute;
-    width: 500px;
+    width: 450px;
     height: 100%;
     right: -10px;
     top: 0px;
@@ -214,24 +213,18 @@ footer{
     
 }
 .cart-content{
-    z-index: 5;
     margin: 1rem 0;
     position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 370px;
-    max-height: 90vh; /* Defina a altura máxima (80% da altura da viewport) */
+    width: 400px;
+    max-height: 80vh;
     overflow-y: auto
 }
-.close-menu{
-    z-index: 10;
-    width: 15;
-    height: 15;
-    background-color: #ffff;
-    position: absolute;
-    right: 26rem;
-    top:0px
+.cart-title{
+    text-align: center;
+     margin-top: 20px;
 }
 .product-container{
     border-radius: 15px;
@@ -250,7 +243,6 @@ footer{
     display: flex;
     flex-direction: column;
 }
-
 .product-infos p{
     font-weight: bold;
     margin-top: 1rem;
