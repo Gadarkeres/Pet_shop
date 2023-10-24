@@ -1,9 +1,7 @@
 const cart = document.querySelector('#cart')
 const close_cart = document.querySelector('#close-cart')
 const open_cart = document.querySelector('#card_open')
-const numberProducts = document.querySelector('#card-number strong')
-let number_cart = 2
-numberProducts.innerText = number_cart
+
 
 
 open_cart.addEventListener("click", menuisVisile);
@@ -16,17 +14,20 @@ cartContent.addEventListener('click', function (event) {
   }
 });
 
-
+const remove_to_card = document.getElementsByClassName('remove-item');
+for (var i = 0; i < remove_to_card.length; i++) {
+    remove_to_card[i].addEventListener('click', removeProduct)
+}
 function removeProduct(event){
         let container = event.target;
         while (container && !container.classList.contains('product-container')) {
             container = container.parentElement;
         }
         if (container) {
-            number_cart --
+  
             container.remove();
             updateTotal();
-            numberProducts.innerText = number_cart
+
         }
 }
 
@@ -70,9 +71,7 @@ for(var i = 0; i < add_to_card.length; i++){
 }
 
 function addProductToCart(event){
-  numberProducts.innerText = number_cart;
-    number_cart ++
-    numberProducts.innerText = number_cart
+
     menuDefinitive()
     const button = event.target
     const productInfos = button.parentElement.parentElement
@@ -92,9 +91,6 @@ function addProductToCart(event){
     <div class="product-title"><p>${productTitle}</p></div>
   <div class="product-price"><p>${productPrice}</p></div>
 </div> `
-
-const removeButton = newCardProduct.querySelector('.remove-item');
-removeButton.addEventListener('click', removeProduct);
 const cart = document.querySelector('.cart-content');
 const totalElement = document.querySelector('.total');
 cart.insertBefore(newCardProduct, totalElement);
