@@ -132,7 +132,7 @@ header h1 {
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
 }
 .card-shop img {
-  max-width: 300px;
+  width: 300px;
 }
 .container-parent {
   width: 100vw;
