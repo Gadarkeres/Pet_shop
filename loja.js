@@ -9,6 +9,22 @@ close_cart.addEventListener("click", menuisVisile)
 
 
 
+ 
+ const buy_Button = document.querySelector('#buy').addEventListener('click', () => {
+  const error_Button= document.querySelector('#danger')
+const value = document.querySelector('.total p').textContent
+console.log(value)
+  if(value === 'TOTAL : R$0,00'){
+    error_Button.classList.add('alert.active')
+    setTimeout(() => {
+      error_Button.classList.remove('alert.active')
+    }, 2500);
+  } else{
+    alert('Sucesso!')
+  }
+ })
+
+
 
 const cartContent = document.querySelector('.cart-content');
 cartContent.addEventListener('click', function (event) {
@@ -28,13 +44,13 @@ function removeProduct(event){
             container = container.parentElement;
         }
         if (container) {
-  
+          alertButton.classList.add('alert.active')
+          setTimeout(() => {
+            alertButton.classList.remove('alert.active')
+          }, 2500);
             container.remove();
             updateTotal();
-            alertButton.classList.add('alert.active')
-            setTimeout(() => {
-              alertButton.classList.remove('alert.active')
-            }, 2500);
+          
         }
 }
 
