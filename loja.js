@@ -71,7 +71,6 @@ for(var i = 0; i < add_to_card.length; i++){
 }
 
 function addProductToCart(event){
-
     menuDefinitive()
     const button = event.target
     const productInfos = button.parentElement.parentElement
