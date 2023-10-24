@@ -315,6 +315,12 @@ div[class="alert alert-danger"] {
   .container-info{
     margin: 3rem 0rem;
   }
+  .info {
+    width: 350px
+  }
+  .card-shop img {
+    width: 250px;
+  }
 }
 
 @media (max-width: 576px) {
