@@ -321,6 +321,12 @@ div[class="alert alert-danger"] {
   .card-shop img {
     width: 250px;
   }
+  .info-text svg {
+    position: absolute;
+    top: 45px;
+    right: 138px;
+    color: #e1c828;
+  }
 }
 
 @media (max-width: 576px) {
