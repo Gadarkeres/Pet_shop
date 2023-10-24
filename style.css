@@ -305,6 +305,10 @@ div[class="alert alert-danger"] {
   .cart-title {
     font-size: 0.2rem;
   }
+  .remove-item{
+    width: 18px;
+    height: 18px;
+  }
 }
 
 @media (max-width: 576px) {
