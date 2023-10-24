@@ -261,7 +261,7 @@ footer{
     background-color: black;
 }
 
-.alert-active{
+.alert-active{removeProdu
      opacity: 0;
     transition: opacity  0.5s;
 }
@@ -275,6 +275,12 @@ div[class="alert alert-danger"] {
     transition: opacity  0.5s;
 }
 @media (max-width: 768px) {
+    .product-title p {
+        font-size: 0.8rem;
+    }
+    .product-image img{
+            width: 80px;
+    }
     #carouselExampleIndicators {
       max-width: 80vw;
     }
