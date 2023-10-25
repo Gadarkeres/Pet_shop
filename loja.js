@@ -17,7 +17,7 @@ const buy_Button = document
         error_Button.classList.remove("alert.active");
       }, 2500);
     } else {
-      alert("Sucesso!");
+      alert("Obrigado pela compra, volte sempre!");
     }
   });
 
@@ -46,7 +46,7 @@ function removeProduct(event) {
     alertButton.classList.add("alert.active");
     setTimeout(() => {
       alertButton.classList.remove("alert.active");
-    }, 2500);
+    }, 2000);
     updateTotal();
   }
 
