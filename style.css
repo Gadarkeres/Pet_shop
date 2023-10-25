@@ -290,9 +290,9 @@ div[class="alert alert-danger"] {
     margin-left: 1.5rem;
     text-transform: uppercase;
     font-size: 1rem;
-    font-family: "Playpen Sans", cursive, sans-serif;
+    font-family: Arial,sans-serif;
     color: #e1c928;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  
   }
   header img {
     width: 200px;
