@@ -147,18 +147,19 @@ header h1 {
   font-weight: bold;
 }
 .button button {
-color: black;
-  font-weight: bold;
+  color: white;
+  font-weight: bolder;
   border: none;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background-color: transparent;
+  background-color: #e1c828;
   border: 2px solid #e1c828;
   transition: all 0.3s;
 }
 .button button:hover {
-  background-color: #e1c828;
-  color: white;
+
+  background-color: transparent;
+  color: #e1c828;
 }
 .price {
   color: gray;
