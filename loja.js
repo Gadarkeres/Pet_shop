@@ -4,10 +4,10 @@ const open_cart = document.querySelector("#card_open");
 
 open_cart.addEventListener("click", menuisVisile);
 close_cart.addEventListener("click", menuisVisile);
+const buy_Button = document.querySelector("#buy").addEventListener("click",finalizePurchase );
 
-const buy_Button = document
-  .querySelector("#buy")
-  .addEventListener("click", () => {
+
+  function finalizePurchase(){
     const error_Button = document.querySelector("#danger");
     const value = document.querySelector(".total p").textContent;
     console.log(value);
@@ -19,7 +19,7 @@ const buy_Button = document
     } else {
       alert("Obrigado pela compra, volte sempre!");
     }
-  });
+  }
 
   document.addEventListener("DOMContentLoaded", function () {
     const cartContent = document.querySelector(".cart-content");
