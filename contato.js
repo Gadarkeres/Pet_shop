@@ -18,6 +18,6 @@ submitButton.addEventListener('click', function () {
         successButton.classList.add("alert.active");
         setTimeout(() => {
             successButton.classList.remove("alert.active");
-        }, 3500);
+        }, 2500);
     }
 });
