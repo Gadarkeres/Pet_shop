@@ -84,4 +84,8 @@ textarea{
     textarea{
         columns: 20;
     }
+    #danger{
+        position: absolute;
+        top: 1123px;
+    }
 }
