@@ -257,12 +257,10 @@ footer {
 }
 
 div[id='sucess'] {
-  opacity: 0;
-  transition: opacity 0.5s;
+  display: none;
 }
 div[id='danger'] {
-  opacity: 0;
-  transition: opacity 0.5s;
+  display: none;
 }
 #remove-item{
   max-width: 150px;
