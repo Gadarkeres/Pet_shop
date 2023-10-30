@@ -256,11 +256,11 @@ footer {
   background-color: black;
 }
 
-div[class="alert alert-success"] {
+div[id='sucess'] {
   opacity: 0;
   transition: opacity 0.5s;
 }
-div[class="alert alert-danger"] {
+div[id='danger'] {
   opacity: 0;
   transition: opacity 0.5s;
 }
