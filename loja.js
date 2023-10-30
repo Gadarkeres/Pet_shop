@@ -15,7 +15,7 @@ const buy_Button = document.querySelector("#buy").addEventListener("click",final
       error_Button.style.display = 'block'
       setTimeout(() => {
         error_Button.style.display = 'none';
-      }, 2000);
+      }, 3000);
     } else {
       alert("Obrigado pela compra, volte sempre!");
     }
