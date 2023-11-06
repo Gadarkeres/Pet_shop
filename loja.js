@@ -1,3 +1,5 @@
+
+
 const cart = document.querySelector("#cart");
 const close_cart = document.querySelector("#close-cart");
 const open_cart = document.querySelector("#card_open");

@@ -45,16 +45,22 @@ body{
     width: 400px;
 }
 textarea{
+    text-indent: 0.5rem;
+    padding: 0.2rem;
     background-color: rgba(255, 255, 255, 0.600);
     color: gray;
     border-radius: 5px;
     margin-left: 1.5rem;
 }
-.form  .input-group input:focus, textarea:focus{
+.form  .input-group input:focus{
     outline: none;
+    border-bottom: 1px solid black
 }
 #success-form, #danger-form{
     display: none;
+}
+textarea:focus{
+    border: 1px solid rgba(0, 0, 0, 0.502);
 }
 
 @media (max-width: 768px){
