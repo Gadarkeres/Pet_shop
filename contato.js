@@ -41,9 +41,7 @@ const Validate = () => {
     const name = document.querySelector('#name').value
     const email = document.querySelector('#email').value
     const msg = document.querySelector('.textarea').value
-     
-    console.log(email, msg)
-
+    
     if(name ===''){
         error_name.style.display = 'initial'
     }
@@ -53,7 +51,4 @@ const Validate = () => {
  if(msg === ''){
         error_msg.style.display = 'initial'
     }
-    
-
- 
 }
