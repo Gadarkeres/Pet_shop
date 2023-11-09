@@ -3,7 +3,17 @@ const alertButton = document.querySelector("#danger-form");
 const successButton = document.querySelector("#success-form ");
 const submitButton = document.querySelector('#submit');
 
+
+const error_name = document.querySelector('#error_name')
+const error_email = document.querySelector('#error_email')
+const error_msg = document.querySelector('#error_msg')
+
+
+
+
+
 submitButton.addEventListener('click', function () {
+    Validate()
     alertButton.style.display = 'none';
     const inputs = document.querySelectorAll('.input');
     const textarea = document.querySelector('textarea');
@@ -22,3 +32,28 @@ submitButton.addEventListener('click', function () {
         }, 2500);
     }
 });
+
+const Validate = () => {
+    error_name.style.display = 'none'
+    error_email.style.display = 'none'
+    error_msg.style.display = 'none'
+    // user
+    const name = document.querySelector('#name').value
+    const email = document.querySelector('#email').value
+    const msg = document.querySelector('.textarea').value
+     
+    console.log(email, msg)
+
+    if(name ===''){
+        error_name.style.display = 'initial'
+    }
+     if(email === ''){
+        error_email.style.display = 'initial'
+    }
+ if(msg === ''){
+        error_msg.style.display = 'initial'
+    }
+    
+
+ 
+}
